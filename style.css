@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+:root{
+    /* text */
+    --Verydark-desaturatedblue: hsl(238, 29%, 16%);
+    --Soft-red: hsl(14, 88%, 65%);
+
+    --Verydark-grayishblue: hsl(237, 12%, 33%);
+    --Dark-grayishblue: hsl(240, 6%, 50%);
+    /* background */
+    --Soft-violet: hsl(273, 75%, 66%);
+    --Soft-blue: hsl(240, 73%, 65%);
+    /*divider*/
+    --Light-grayish-blue: hsl(240, 5%, 91%);
+}
+
+body{
+    font-family: 'Outfit', sans-serif;
+    background: linear-gradient(hsl(273, 75%, 66%),hsl(240, 73%, 65%));
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.card{
+    background: whitesmoke;
+    width: 900px;
+    height: 500px;
+    border-radius: 20px;
+    box-shadow:  0px 20px 40px 0px  hsl(237, 12%, 33%);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.left-col{
+    width: 90%;
+    position: relative;
+    overflow: hidden;
+}
+
+.image1{
+    position: absolute;
+    top: -59%;
+    right: 4%; 
+}
+
+.image2{
+    position: absolute;
+    top: 13%;
+    right: 4%; 
+}
+
+.image3{
+    position: absolute;
+    top: 43%;
+    right: 80.8%;
+    z-index: 100;
+}
+
+.right-col{
+    margin: 40px 50px 0px 0px;
+    padding: 0px 0px ;
+}
+h1{
+    margin: 25px 0;
+}
+
+.faq{
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+    color: var(--Dark-grayishblue);
+    border-bottom: 1px solid var(--Light-grayish-blue);
+    padding: 18px 0px 18px 0px;
+    cursor: pointer;
+}
+
+h4:hover{
+    color: var(--Soft-red);
+}
+
+.faq p{        /*hidding the text*/
+    display: none;
+    margin-top: 8px;
+ }
+
+
+ .faq.open p{    /*text shows back on*/
+    display: block;
+}  
+
+.faq.open h4{    /*question turns black color*/
+    color: black;
+}
+
+.faq.open img{    /*that changes arrow position upward*/
+    transform: rotate(180deg);
+}
+
+
+@media screen and (max-width: 375px){
+    .card{
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+    }
+    .right-col{
+        margin: 60px 0 0 0; 
+        padding: 25px;
+    }
+    .faq{
+        font-size: 13px;
+    }
+    h1{
+        text-align: center;
+        margin: 0 0;
+    }
+
+    
+
+}
